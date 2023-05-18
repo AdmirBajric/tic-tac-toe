@@ -1,0 +1,146 @@
+:root {
+  --black: #312b2b;
+  --blackHover: #352f2f;
+  --white: #fff;
+  --fontWeight1: 500;
+  --fontWeight2: 700;
+  --fontWeight3: 900;
+  --roboto: "Roboto";
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  user-select: none;
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100vh;
+  box-sizing: border-box;
+  font-family: var(--roboto);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--black);
+}
+
+#title {
+  width: 100%;
+  height: 25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5rem;
+  margin-bottom: 10rem;
+}
+
+#title h1 {
+  font-size: 5rem;
+  color: var(--white);
+  font-weight: var(--fontWeight2);
+  text-transform: uppercase;
+}
+
+#circle,
+#close {
+  width: 10rem;
+  height: 10rem;
+}
+
+#close {
+  opacity: 0.2;
+  margin-left: 5rem;
+}
+
+#images {
+  margin-top: 3rem;
+}
+
+#main {
+  width: 35%;
+  height: 40%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#main div {
+  color: var(--white);
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#main div:hover {
+  cursor: pointer;
+}
+
+.circle,
+.close {
+  width: 8rem;
+  height: 8rem;
+}
+
+#confetti-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+#no-winner {
+  display: none;
+  font-size: 4rem;
+  font-weight: var(--fontWeight2);
+  color: var(--white);
+  margin-bottom: 2rem;
+}
+
+#play-again {
+  display: none;
+  border: none;
+  border-radius: 1.5rem;
+  padding: 1.5rem 10rem 1.5rem 10rem;
+  background-color: var(--white);
+  color: var(--black);
+  font-size: 1.6rem;
+  font-weight: var(--fontWeight2);
+  cursor: pointer;
+  opacity: 1;
+}
+
+[id="0"],
+[id="1"],
+[id="2"],
+[id="3"],
+[id="4"],
+[id="5"] {
+  width: 33.3333%;
+  height: 33.3333%;
+  border-bottom: 0.2rem solid var(--white);
+}
+
+[id="0"],
+[id="1"],
+[id="3"],
+[id="4"],
+[id="6"],
+[id="7"] {
+  border-right: 0.2rem solid var(--white);
+}
+
+[id="6"],
+[id="7"],
+[id="8"] {
+  width: 33.3333%;
+  height: 33.3333%;
+}
